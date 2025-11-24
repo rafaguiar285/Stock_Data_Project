@@ -48,12 +48,12 @@ gameStop = yf.Ticker('GME')
 #Extract stock information and save it in a dataframe
 gme_data = gameStop.history(period='max')
 #Reset the Index
-tesla_data.reset_index(inplace=True)
+gme_data.reset_index(inplace=True)
 #Display the five first rows
 print(tesla_data.head())
 
 
-from Webscraping_Extract_Revenue_Data.py import tesla_revenue, gameStopRevenue
+from Webscraping_Extract_Revenue_Data import tesla_revenue, gameStopRevenue
 
 #PLOT THE GRAPHS
 make_graph(tesla_data, tesla_revenue, 'Tesla')
